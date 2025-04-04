@@ -45,7 +45,9 @@ export type AtprotoOAuthClientFromMetadataOptions =
     Omit<AtprotoOAuthClientOptions, "clientMetadata">;
 
 export class AtprotoOAuthClient extends OAuthClient {
-  static async fromClientId(options: AtprotoOAuthClientFromMetadataOptions) {
+  static async fromClientId(
+    options: AtprotoOAuthClientFromMetadataOptions
+  ): Promise<AtprotoOAuthClient> {
     const clientMetadata = await OAuthClient.fetchMetadata(options);
     return new AtprotoOAuthClient({ ...options, clientMetadata });
   }

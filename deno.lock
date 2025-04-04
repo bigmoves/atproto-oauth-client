@@ -9,7 +9,8 @@
     "npm:@atproto/jwk@0.1.4": "0.1.4",
     "npm:@atproto/oauth-client@~0.3.13": "0.3.13",
     "npm:@atproto/oauth-types@~0.2.4": "0.2.4",
-    "npm:@types/node@*": "22.12.0"
+    "npm:@types/node@*": "22.12.0",
+    "npm:jose@5.9.6": "5.9.6"
   },
   "jsr": {
     "@std/assert@1.0.12": {
@@ -169,6 +170,9 @@
     "iso-datestring-validator@2.2.2": {
       "integrity": "sha512-yLEMkBbLZTlVQqOnQ4FiMujR6T4DEcCb1xizmvXS+OxuhwcbtynoosRzdMA69zZCShCNAbi+gJ71FxZBBXx1SA=="
     },
+    "jose@5.9.6": {
+      "integrity": "sha512-AMlnetc9+CV9asI19zHmrgS/WYsWUwCn2R7RzlbJWD7F9eWYUTGyBmU9o6PxngtLGOiDGPRu+Uc4fhKzbpteZQ=="
+    },
     "lru-cache@10.4.3": {
       "integrity": "sha512-JNAzZcXrCt42VGLuYz0zfAzDfAvJWW6AfYlDBQyDV5DClI2m5sAmK+OIO7s59XfsRsWHp02jAJrRadPRGTt6SQ=="
     },
@@ -289,7 +293,8 @@
       "npm:@atproto-labs/simple-store@~0.1.2",
       "npm:@atproto/jwk@0.1.4",
       "npm:@atproto/oauth-client@~0.3.13",
-      "npm:@atproto/oauth-types@~0.2.4"
+      "npm:@atproto/oauth-types@~0.2.4",
+      "npm:jose@5.9.6"
     ]
   }
 }
