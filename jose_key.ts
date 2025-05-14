@@ -53,7 +53,9 @@ export class JoseKey<J extends Jwk = Jwk> extends Key<J> {
    * provide the following method to ensure the `alg` is always set. We also
    * take the opportunity to ensure that the `alg` is compatible with this key.
    */
-  protected async getKeyObj(alg: string) {
+  protected async getKeyObj(
+    alg: string
+  ): Promise<KeyLike | Uint8Array<ArrayBufferLike>> {
     if (!this.algorithms.includes(alg)) {
       throw new JwkError(`Key cannot be used with algorithm "${alg}"`);
     }
@@ -144,7 +146,7 @@ export class JoseKey<J extends Jwk = Jwk> extends Key<J> {
   static async generateKeyPair(
     allowedAlgos: readonly string[] = ["ES256"],
     options?: GenerateKeyPairOptions
-  ) {
+  ): Promise<GenerateKeyPairResult<KeyLike>> {
     if (!allowedAlgos.length) {
       throw new JwkError("No algorithms provided for key generation");
     }
@@ -167,7 +169,7 @@ export class JoseKey<J extends Jwk = Jwk> extends Key<J> {
     allowedAlgos: string[] = ["ES256"],
     kid?: string,
     options?: Omit<GenerateKeyPairOptions, "extractable">
-  ) {
+  ): Promise<JoseKey> {
     const kp = await this.generateKeyPair(allowedAlgos, {
       ...options,
       extractable: true,

@@ -1,6 +1,6 @@
 {
   "name": "@bigmoves/atproto-oauth-client",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "license": "MIT",
   "imports": {
     "@atproto-labs/handle-resolver-node": "npm:@atproto-labs/handle-resolver-node@^0.1.14",
@@ -14,5 +14,9 @@
   "tasks": {
     "test": "deno test -A"
   },
-  "exports": "./mod.ts"
+  "exports": {
+    ".": "./mod.ts",
+    "./jose_key.ts": "./jose_key.ts",
+    "./node_dpop_store.ts": "./node_dpop_store.ts"
+  }
 }

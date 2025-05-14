@@ -1,5 +1,5 @@
 import { createHash, randomBytes } from "node:crypto";
-import { JoseKey } from "./jose-key.ts";
+import { JoseKey } from "./jose_key.ts";
 import {
   OAuthClient,
   type Key,
@@ -16,9 +16,9 @@ import {
   type NodeSavedSessionStore,
   type NodeSavedStateStore,
   toDpopKeyStore,
-} from "./node-dpop-store.ts";
+} from "./node_dpop_store.ts";
 
-export type * from "./node-dpop-store.ts";
+export type * from "./node_dpop_store.ts";
 export type { OAuthClientOptions, OAuthResponseMode, RuntimeLock };
 
 export type AtprotoOAuthClientOptions = Omit<

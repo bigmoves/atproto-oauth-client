@@ -1,5 +1,5 @@
 // deno-lint-ignore-file require-await
-import type { NodeSavedSession, NodeSavedState } from "./node-dpop-store.ts";
+import type { NodeSavedSession, NodeSavedState } from "./node_dpop_store.ts";
 import { assert } from "@std/assert";
 import { AtprotoOAuthClient } from "./mod.ts";
 
